@@ -2,9 +2,9 @@
 <html lang="ja">
 
 
-■ 制作タスク一覧
+<!-- ■ 制作タスク一覧
 ①共通パーツのページ構成とレイアウトを完成
-index のヘッダー・フッターを製品以外の下層ページへコピー。
+index のヘッダー・フッターを下層ページ(製品詳細以外)へコピー。
 
 ②下層ページの完遂
 About / Company / 各製品ページ ボディ部分のページ構成とレイアウトを完成させる。
@@ -28,7 +28,7 @@ index 内の製品リンク、SNSリンク（Instagram/X等）の紐付け。
 パスの整合性: 画像やリンクの指定が相対パスになっており、本番環境で表示されるか。
 外部リンク設定: SNSリンクに target="_blank" と rel="noopener" が設定されているか。
 レスポンシブ: スマホやPCで見た際に崩れがなく、メニューが正常に開閉するか。
-JS動作確認: エラーがなく処理が意図通りか。
+JS動作確認: エラーがなく処理が意図通りか。 -->
 
 
 
@@ -53,102 +53,104 @@ JS動作確認: エラーがなく処理が意図通りか。
 
 
 <body>
-  <header class="header">
-    <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""></a></h1>
-    <!-- <button type="button" aria-label="メニューを開く">Menu</button>
+  <div id="wrapper">
+    <header class="header">
+      <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""></a></h1>
+      <!-- <button type="button" aria-label="メニューを開く">Menu</button>
     <nav aria-label="グローバルナビゲーション"> -->
-    <!-- <ul>
+      <!-- <ul>
         <li><a href="index.html">PRODUCTS</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="company.html">COMPANY</a></li>
         <li><a href="mailto:info@example.com">CONTACT</a></li>
       </ul> -->
-    <!-- </nav> -->
-  </header>
+      <!-- </nav> -->
+    </header>
 
-  <main class="main">
-    <section caria-labelledby="products-heading">
-      <h2 id="products-heading">Products</h2>
+    <main class="main">
+      <section caria-labelledby="products-heading">
+        <h2 id="products-heading">Products</h2>
 
-      <ul class="item-list">
-        <li><a href="product1.html"><img src="img/item1.jpg" alt="プロダクト1" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product2.html"><img src="img/item2.jpg" alt="プロダクト2" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product3.html"><img src="img/item3.jpg" alt="プロダクト3" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product4.html"><img src="img/item4.jpg" alt="プロダクト4" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product5.html"><img src="img/item5.jpg" alt="プロダクト5" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product6.html"><img src="img/item6.jpg" alt="プロダクト6" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product7.html"><img src="img/item7.jpg" alt="プロダクト7" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product8.html"><img src="img/item8.jpg" alt="プロダクト8" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product9.html"><img src="img/item9.jpg" alt="プロダクト9" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product10.html"><img src="img/item10.jpg" alt="プロダクト10" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product11.html"><img src="img/item11.jpg" alt="プロダクト11" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
-        <li><a href="product12.html"><img src="img/item12.jpg" alt="プロダクト12" />
-            <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
-            <p class="item-des">&yen;99,999 +tax</p>
-          </a>
-        </li>
+        <ul class="item-list">
+          <li><a href="product1.html"><img src="img/item1.jpg" alt="プロダクト1" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product2.html"><img src="img/item2.jpg" alt="プロダクト2" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product3.html"><img src="img/item3.jpg" alt="プロダクト3" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product4.html"><img src="img/item4.jpg" alt="プロダクト4" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product5.html"><img src="img/item5.jpg" alt="プロダクト5" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product6.html"><img src="img/item6.jpg" alt="プロダクト6" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product7.html"><img src="img/item7.jpg" alt="プロダクト7" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product8.html"><img src="img/item8.jpg" alt="プロダクト8" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product9.html"><img src="img/item9.jpg" alt="プロダクト9" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product10.html"><img src="img/item10.jpg" alt="プロダクト10" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product11.html"><img src="img/item11.jpg" alt="プロダクト11" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+          <li><a href="product12.html"><img src="img/item12.jpg" alt="プロダクト12" />
+              <p class="item-des">プロダクトタイトルプロダクトタイトル</p>
+              <p class="item-des">&yen;99,999 +tax</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <nav class="pages-guide" aria-label="ページネーション">
+        <p>1</p>
+        <p><a href="index2.html">2</a></p>
+      </nav>
+    </main>
+
+
+    <footer>
+      <ul class="sns-list">
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+        <li><a href="https://x.com/" target="_blank" rel="noopener">TWITTER</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">FACEBOOK</a></li>
       </ul>
-    </section>
-
-    <nav class="pages-guide" aria-label="ページネーション">
-      <p>1</p>
-      <p><a href="index2.html">2</a></p>
-    </nav>
-  </main>
-
-
-  <footer>
-    <ul class="sns-list">
-      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">INSTAGRAM</a></li>
-      <li><a href="https://x.com/" target="_blank" rel="noopener">TWITTER</a></li>
-      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">FACEBOOK</a></li>
-    </ul>
-    <small>&copy; Furniture Design</small>
-  </footer>
+      <small>&copy; Furniture Design</small>
+    </footer>
+  </div>
 </body>
 
 </html>
