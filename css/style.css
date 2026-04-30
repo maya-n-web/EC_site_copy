@@ -20,18 +20,15 @@ body {
     font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
     line-height: 1.7;
     box-sizing: border-box;
-    max-width: 1360px;
     font-weight: 300;
-    margin: 0;
     padding: 50px 40px;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 1360px;
     margin: 0 auto;
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -62,6 +59,8 @@ h2 {
    2. ヘッダー・ナビゲーション
    ========================================= */
 .header {
+    max-width: 1360px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     background-color: var(--bg);
